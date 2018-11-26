@@ -1,0 +1,11 @@
+#localVideo{
+    border: 1px black solid;
+    width: 150px;
+}
+.video{
+    margin-left: 0px !important;
+    /* margin-top: 15px; */
+    float: left;
+    border: 1px black solid;
+    width: 250px !important;
+}
