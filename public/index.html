@@ -19,7 +19,6 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="navbar navbar-default nav-classroom" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -31,8 +30,6 @@
                         <img src="img/logo-light.png" alt="">
                     </a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse" style="margin-left: 90px">
                     <ul class="nav navbar-nav ul-nav-classroom">
                         <li>
@@ -58,13 +55,12 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </nav>
         </div>
-        <div class="row" style="height: 87vh">
+        <div class="row" style="height: 92vh">
             <div class="col-md-9" style="height: 100%">
-                <div class="row" style="height:81%">
-                    <div id="slide-container">
+                <div class="row" style="height:80%">
+                    <div id="slideContainer">
                         <div id="slide">
                             <canvas id="the-canvas"></canvas>
                         </div>
@@ -78,10 +74,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="height: 19%;">
-                    <div class="video"><video  autoplay muted></video></div>
-                    <div class="video"><video  autoplay muted></video></div>
-                    <div class="video"><video  autoplay muted></video></div>
+                <div class="row" id="videoContainer">
+                    <div class="video"><video id="localVideo" autoplay muted></video></div>
+                    <div class="video"><video id="remoteVideo" autoplay></video></div>
+                    <input id="roomNumber" type="text">
+                    <button id="goRoom">Go</button>
                 </div>
             </div>
             <div class="col-md-3 border-left" style="height: 100%">
@@ -113,12 +110,10 @@
             </div>
         </div>
     </div>
-    <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <!-- Bootstrap JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="js/pdf.js"></script>
     <script src="js/slide.js"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/client.js"></script>
 </body>
 
 </html>
